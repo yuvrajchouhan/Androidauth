@@ -1,5 +1,8 @@
+
 source 'https://rubygems.org'
 
+gem 'foundation-rails'
+#devise
 gem 'devise_token_auth'
 #to encode data
 gem	'rabl'

@@ -5,12 +5,13 @@ Rails.application.routes.draw do
   root "products#index"
 
   namespace :api, defaults: {format: 'json'} do
-      devise_scope :user do
        namespace :v1 do
+      devise_scope :user do
         resources :products
         post 'registrations' => 'registrations#create', :as => 'register'
         resources :sessions, :only => [:create, :destroy]
       end
+      get 'tasks' => 'tasks#index', :as => 'tasks'
     end
   end
 

@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>AndroidAuth</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
- <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-       <% if current_user %>
-       <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-       	<% else %>
-       	<%= link_to "Login", new_user_session_path %>
-       <% end %>
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<%= yield %>
+  <body>
+    <%= yield %>
 
-</body>
+  </body>
 </html>
