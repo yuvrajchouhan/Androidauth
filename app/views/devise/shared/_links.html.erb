@@ -1,9 +1,9 @@
 <%- if controller_name != 'sessions' %>
-<a href="/users/sign_in" class="warning button " style="width:26.2rem">Click To Sign In Now</a>
+<a href="/users/sign_in" class="warning button">Click To Sign In Now</a>
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-<a href="/users/sign_up" class="alert hollow button " style="width:26.2rem">Not a Member? Sign up Now</a>
+<a href="/users/sign_up" class="alert hollow button " style="width:100%">Not a Member? Sign up Now</a>
 
 <% end -%>
 
@@ -21,3 +21,43 @@
     <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
   <% end -%>
 <% end -%>
+
+
+<style>
+	
+	// Small screens
+@media only screen { } /* Define mobile styles */
+
+@media only screen and (max-width: 40em) { 
+.warning{
+width:20rem;
+}
+
+.alert{
+
+}
+
+	} /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+// Medium screens
+@media only screen and (min-width: 40.063em) {
+.warning{
+width:20rem;
+}
+ } /* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+// Large screens
+@media only screen and (min-width: 64.063em) { } /* min-width 1025px, large screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+// XXLarge screens
+@media only screen and (min-width: 120.063em) { } /* min-width 1921px, xxlarge screens */
+</style>
