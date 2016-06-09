@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
          :token_uthenticatable
 
          has_many :products
+         has_many :pants
+         has_many :shirts
 
 	def skip_confirmation!
   		self.confirmed_at = Time.now

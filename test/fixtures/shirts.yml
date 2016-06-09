@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Half_shirt: false
+  Full_shirt: false
+  Full_length: 1
+  Sleeve_length: 1
+  shoulder: 1
+  collar: 1
+  chest: 1
+  stomach: 1
+  hip: 1
+  Pocket: false
+  side_cut: false
+  side_cover: false
+  user_id: 1
+
+two:
+  Half_shirt: false
+  Full_shirt: false
+  Full_length: 1
+  Sleeve_length: 1
+  shoulder: 1
+  collar: 1
+  chest: 1
+  stomach: 1
+  hip: 1
+  Pocket: false
+  side_cut: false
+  side_cover: false
+  user_id: 1

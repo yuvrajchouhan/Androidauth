@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  Full_length: 1
+  Waist: 1
+  Hip: 1
+  Thigh: 1
+  Knee_length: 1
+  Knee_diameter: 1
+  Folik: 1
+  Long_belt: false
+  short_belt: false
+  side_stich: false
+  bottom_stich: false
+  Pockets: false
+  Back_pocket: false
+  cover: false
+
+two:
+  user_id: 1
+  Full_length: 1
+  Waist: 1
+  Hip: 1
+  Thigh: 1
+  Knee_length: 1
+  Knee_diameter: 1
+  Folik: 1
+  Long_belt: false
+  short_belt: false
+  side_stich: false
+  bottom_stich: false
+  Pockets: false
+  Back_pocket: false
+  cover: false

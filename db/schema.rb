@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160531152103) do
+ActiveRecord::Schema.define(version: 20160609111055) do
+
+  create_table "pants", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "Full_length"
+    t.integer  "Waist"
+    t.integer  "Hip"
+    t.integer  "Thigh"
+    t.integer  "Knee_length"
+    t.integer  "Knee_diameter"
+    t.integer  "Folik"
+    t.boolean  "Long_belt"
+    t.boolean  "short_belt"
+    t.boolean  "side_stich"
+    t.boolean  "bottom_stich"
+    t.boolean  "Pockets"
+    t.boolean  "Back_pocket"
+    t.boolean  "cover"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "product_id"
+  end
 
   create_table "products", force: :cascade do |t|
     t.string   "Name"
@@ -24,6 +45,24 @@ ActiveRecord::Schema.define(version: 20160531152103) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "user_id"
+  end
+
+  create_table "shirts", force: :cascade do |t|
+    t.boolean  "Half_shirt"
+    t.boolean  "Full_shirt"
+    t.integer  "Full_length"
+    t.integer  "Sleeve_length"
+    t.integer  "shoulder"
+    t.integer  "collar"
+    t.integer  "chest"
+    t.integer  "stomach"
+    t.integer  "hip"
+    t.boolean  "Pocket"
+    t.boolean  "side_cut"
+    t.boolean  "side_cover"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "users", force: :cascade do |t|
