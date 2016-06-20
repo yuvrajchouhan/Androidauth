@@ -1,17 +1,25 @@
 class PantsController < ApplicationController
 
-def create
-	@pant = current_user.pants.build(pant_params)
-	@pant.save
+def index
+@pants = Pant.all
+end
 
-end
 def new
-	@pant = current_user.pants.build
-	
+@pants = Pant.new
 end
+
+def create
+	@pant = Pant.new(pant_params)
+	if @pant.save
+		redirect_to new_shirt_path
+	else
+		render 'new'
+	end
+end
+
 private
 def pant_params
-	params.require(:pant).permit(:Full_length, :Waist, :Hip, :Thigh, :Knee_length, :Knee_diameter, :Folik, :Long_belt, :short_belt, :side_stich, :bottom_stich, :Pockets, :Back_pocket, :cover, :product_id, :user_id)
+	params.require(:pant).permit(:Full_length, :Fork, :Waist, :Hip, :Bottom, :Thigh, :Knee_length, :Knee_losing, :plates, :Belt, :short_belt, :side_stich, :bottom_stich, :Pockets, :Back_pocket, :cover, :product_id, :user_id)
 	
 end
 end

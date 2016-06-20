@@ -1,0 +1,116 @@
+<%= form_for @shirts do |f| %>
+<div class="large-4 column">
+<%= f.label :Shirt_size %>
+  <%= f.select :Shirt_size,[ "Full", "Half"] %>
+ </div>
+
+<div class="large-4 column">
+<%= f.label :shirt_option %>
+  <%= f.select :shirt_option, ["Bush", "Open"] %>
+</div>
+
+<div class="large-4 column">
+<%= f.label :clothing_option %>
+  <%= f.select :clothing_option, ["Shirt","Safari"] %>
+</div>
+
+<div class="large-6 column">
+<h3>Shirt</h3>
+	<%= f.label :Full_length %>
+	<%= f.text_field :Full_length %>
+
+	<%= f.label :Sleeve_length %>
+	<%= f.text_field :Sleeve_length %>
+
+	<%= f.label :Cuff %>
+	<%= f.text_field :Cuff %>
+
+	<%= f.label :Shirt_losing %>
+	<%= f.text_field :Shirt_losing %>
+   
+   	<%= f.label :Shoulder %>
+	<%= f.text_field :Shoulder %>
+    
+    <%= f.label :neck %>
+	<%= f.text_field :neck %>
+    
+    <%= f.label :chest %>
+	<%= f.text_field :chest %>
+    
+    <%= f.label :stomach %>
+	<%= f.text_field :stomach %>
+ 
+
+</div>
+
+
+<div class="large-6 column">
+<h3>Safari</h3>
+	<%= f.label :Half_length %>
+	<%= f.text_field :Half_length %>
+	
+	<%= f.label :Half_sleeve_length %>
+	<%= f.text_field :Half_sleeve_length %>
+
+	<%= f.label :Safari_losing %>
+	<%= f.text_field :Safari_losing %>
+   
+	<%= f.label :Half_Shoulder %>
+	<%= f.text_field :Half_Shoulder %>
+
+	<%= f.label :Half_Neck %>
+	<%= f.text_field :Half_Neck %>
+    
+    <%= f.label :chest_size %>
+	<%= f.text_field :chest_size %>
+    
+    <%= f.label :stomach_size %>
+	<%= f.text_field :stomach_size %>    
+</div>
+
+<div class="row">
+ <div class="large-6 column">
+<%= f.label :side_stich %>
+  <%= f.select :side_stich, ["Normal","Double Stich"] %>
+</div>
+
+<div class="large-6 column">
+<%= f.label :pallo_patti %>
+  <%= f.select :pallo_patti, ["1/4 inch","inside","plain"] %>
+</div>
+
+</div>
+
+
+<div class="row">
+<div class="large-2 column">
+ Pocket <%= f.check_box :pocket %> 
+</div>
+
+
+<div class="large-2 column">
+ Pocket Cover <%= f.check_box :pocket_cover %> 
+</div>
+
+<div class="large-2 column">
+ 1 in pocket <%= f.check_box :one_in_pocket %> 
+</div>
+
+<div class="large-2 column">
+ Double Stich <%= f.check_box :double_stich %> 
+</div>
+
+<div class="large-2 column">
+  V Shoulder <%= f.check_box :v_shoulder %> 
+</div>
+	
+<div class="large-2 column">
+  Back Cut <%= f.check_box :back_cut %> 
+</div>
+
+</div>
+
+
+<%= f.submit :class => 'success button' %>
+
+<% end %>

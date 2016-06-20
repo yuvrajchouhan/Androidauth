@@ -11,27 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160609111055) do
+ActiveRecord::Schema.define(version: 20160619140258) do
 
   create_table "pants", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "Full_length"
-    t.integer  "Waist"
-    t.integer  "Hip"
-    t.integer  "Thigh"
-    t.integer  "Knee_length"
-    t.integer  "Knee_diameter"
-    t.integer  "Folik"
-    t.boolean  "Long_belt"
-    t.boolean  "short_belt"
-    t.boolean  "side_stich"
-    t.boolean  "bottom_stich"
-    t.boolean  "Pockets"
-    t.boolean  "Back_pocket"
-    t.boolean  "cover"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "Full_length"
+    t.string   "Fork"
+    t.string   "Waist"
+    t.string   "Hip"
+    t.string   "Bottom"
+    t.string   "Thigh"
+    t.string   "Knee_length"
+    t.string   "Knee_losing"
+    t.boolean  "plates"
+    t.string   "Belt"
+    t.string   "Loop"
+    t.string   "Pockets"
+    t.string   "Back_pocket"
+    t.string   "side_stich"
+    t.string   "bottom_stich"
     t.integer  "product_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "products", force: :cascade do |t|
@@ -48,21 +49,36 @@ ActiveRecord::Schema.define(version: 20160609111055) do
   end
 
   create_table "shirts", force: :cascade do |t|
-    t.boolean  "Half_shirt"
-    t.boolean  "Full_shirt"
-    t.integer  "Full_length"
-    t.integer  "Sleeve_length"
-    t.integer  "shoulder"
-    t.integer  "collar"
-    t.integer  "chest"
-    t.integer  "stomach"
-    t.integer  "hip"
-    t.boolean  "Pocket"
-    t.boolean  "side_cut"
-    t.boolean  "side_cover"
+    t.string   "Shirt_size"
+    t.string   "shirt_option"
+    t.string   "clothing_option"
+    t.string   "Full_length"
+    t.string   "Sleeve_length"
+    t.string   "Cuff"
+    t.string   "Shirt_losing"
+    t.string   "Shoulder"
+    t.string   "neck"
+    t.string   "chest"
+    t.string   "stomach"
+    t.string   "Half_length"
+    t.string   "Half_sleeve_length"
+    t.string   "Safari_losing"
+    t.string   "Half_Shoulder"
+    t.string   "Half_Neck"
+    t.string   "chest_size"
+    t.string   "stomach_size"
+    t.boolean  "pocket"
+    t.boolean  "pocket_cover"
+    t.string   "side_stich"
+    t.string   "pallo_patti"
+    t.boolean  "one_in_pocket"
+    t.boolean  "double_stich"
+    t.boolean  "v_shoulder"
+    t.boolean  "back_cut"
+    t.integer  "product_id"
     t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|

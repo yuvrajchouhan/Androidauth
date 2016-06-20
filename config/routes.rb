@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   resources :products
+  resources :pants
+  resources :shirts
   root "products#index"
 
   namespace :api, defaults: {format: 'json'} do

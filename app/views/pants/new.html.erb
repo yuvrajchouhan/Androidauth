@@ -1,0 +1,88 @@
+<%= form_for @pants do |f| %>
+<div class="large-4 column">
+<%= f.label :Full_length %>
+  <%= f.text_field :Full_length %>
+ </div>
+
+<div class="large-4 column">
+<%= f.label :Fork %>
+  <%= f.text_field :Fork %>
+</div>
+
+<div class="large-4 column">
+<%= f.label :Waist %>
+  <%= f.text_field :Waist %>
+</div>
+
+<div class="large-4 column">
+	<%= f.label :Hip %>
+	<%= f.text_field :Hip %>
+</div>
+
+
+<div class="large-4 column">
+	<%= f.label :Bottom %>
+	<%= f.text_field :Bottom %>
+</div>
+
+<div class="large-4 column">
+	<%= f.label :Thigh %>
+	<%= f.text_field :Thigh %>
+</div>
+
+<div class="large-4 column">
+	<%= f.label :Knee_length %>
+	<%= f.text_field :Knee_length %>
+</div>
+
+<div class="large-4 column">
+	<%= f.label :Knee_losing %>
+	<%= f.text_field :Knee_losing %>
+</div>
+
+ <div class="large-4 columns">
+	<%= f.label :plates %>
+    <%= f.check_box :plates %> 
+    </div>
+
+<hr>
+
+<div class="large-4 column">
+	<%= f.label :Belt %>
+    <%= f.select :Belt, ['Long', 'Cut']%>
+</div>
+
+<div class="large-4 column">
+	<%= f.label :Loop %>
+    <%= f.select :Loop, ['Fix', 'Normal', 'Police']%>
+</div>
+
+
+<div class="large-4 column">
+	<%= f.label :Pockets %>
+    <%= f.select :Pockets, ['Side', 'Cross', 'Mobile', 'Round']%>
+</div>
+
+
+<div class="large-4 column">
+	<%= f.label :Back_pocket %>
+    <%= f.select :Back_pocket, ['Normal', 'Single Bow', 'Single Bow by']%>
+</div>
+
+<div class="large-4 column">
+	<%= f.label :Side_stich %>
+    <%= f.select :side_stich, ['Plain', 'S.D.S', 'Ninari','1/2 Dao']%>
+</div>
+
+<div class="large-4 column">
+	<%= f.label :Bottom_stich %>
+
+    <%= f.select :bottom_stich, ['Hand', 'Machine']%>
+</div>
+
+
+	<%= f.submit :class => 'success button' %>
+
+
+
+<% end %>

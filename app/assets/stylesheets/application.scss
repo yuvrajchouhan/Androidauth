@@ -24,3 +24,22 @@
   background:         linear-gradient(90deg, #1D976C 10%, #93F9B9 90%);
   font-family: 'Lato', sans-serif;
 }
+
+.post_wrapper {
+		padding: 3em;
+		border-bottom: 2px solid #d6dce0;
+		.title {
+			margin: 0;
+			a {
+				font-weight: 500;
+				text-decoration: none;
+				color: #2a2f35;
+				font-size: 1.5em;
+				&:hover {
+					color: #33acb7;
+				}
+			}
+		}
+    }
+
+
