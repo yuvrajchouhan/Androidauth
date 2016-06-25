@@ -1,0 +1,29 @@
+<h1>Your Cart</h1>
+ <h3 class="title"><%= link_to 'Empty Your Cart', cart_clear_path %></h3>
+<br><br><br>
+
+<% total = 0 %>
+
+<ol>
+<% @cart.each do | id, quantity | %>
+	<% product = Product.find_by_id(id) %>
+
+	<li>
+		<h2 class="title"><%= link_to product.Name, product %></h2>
+		<p><%= number_to_currency(product.price, :unit => '$') %></p>
+		<p>Quantity:	<%= quantity %></p>
+	</li>
+	<% total += quantity * product.price %>
+
+	<% end %>
+
+	<p><b><%= number_to_currency(total, :unit => '$') %></b></p>
+	</ol>
+
+
+<a class="success button" href="checkouts/new">
+    <i class="fa fa-shopping-cart fa-lg"></i>
+Check Out
+</a>
+
+

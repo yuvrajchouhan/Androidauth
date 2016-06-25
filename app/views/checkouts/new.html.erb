@@ -1,0 +1,35 @@
+<%= simple_form_for @checkout do |f| %>
+
+<strong><%= f.label :Full_name  %></strong>
+<%=f.text_field :Full_name %>
+
+<strong><%= f.label :Mobile_number %></strong> 
+<%=f.text_field :mobile_number %>
+
+<strong><%= f.label :pincode %></strong> 
+<%=f.text_field :pincode %>
+
+<strong><%= f.label :Address_line %> </strong> 
+<%=f.text_field :Address_line %>
+
+<strong><%= f.label :landmark %></strong> 
+<%=f.text_field :landmark %>
+
+<strong><%= f.label :Address_type %> </strong> 
+<%=f.text_field :Address_type %>
+
+<a class="success button" data-open="exampleModal1" >Deliver to this address</a>
+
+
+<div class="reveal" id="exampleModal1" data-reveal>
+  <h1>Order</h1>
+  <p class="lead">Thanks for ordering.</p>
+  <p>Will come back to your order soon...</p>
+  <%= f.submit "Finish", class: 'success button' %>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<% end %>
+

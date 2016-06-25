@@ -8,8 +8,9 @@ class User < ActiveRecord::Base
          has_many :products
          has_many :pants
          has_many :shirts
+         has_many :checkouts 
 
-	def skip_confirmation!
+  	def skip_confirmation!
   		self.confirmed_at = Time.now
 	end
 end

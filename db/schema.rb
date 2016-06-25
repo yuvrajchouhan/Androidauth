@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160619140258) do
+ActiveRecord::Schema.define(version: 20160625170818) do
+
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "product_id"
+    t.integer  "user_id"
+  end
+
+  create_table "checkouts", force: :cascade do |t|
+    t.string   "Full_name"
+    t.string   "mobile_number"
+    t.string   "pincode"
+    t.string   "Address_line"
+    t.string   "landmark"
+    t.string   "Address_type"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+    t.integer  "product_id"
+  end
 
   create_table "pants", force: :cascade do |t|
     t.string   "Full_length"
@@ -46,6 +66,9 @@ ActiveRecord::Schema.define(version: 20160619140258) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "user_id"
+    t.integer  "price"
+    t.integer  "quantity"
+    t.integer  "checkout_id"
   end
 
   create_table "shirts", force: :cascade do |t|
