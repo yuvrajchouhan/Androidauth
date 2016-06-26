@@ -11,7 +11,7 @@ end
 def create
 	@shirt = Shirt.new(shirt_params)
 	if @shirt.save
-		redirect_to @shirt
+		redirect_to root_path
 	else
 		render 'new'
 	end
